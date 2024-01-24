@@ -1,0 +1,28 @@
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding-top: 50px;
+}
+.blog-post {
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  padding: 20px;
+  height: 350px;
+  width: 20%;
+}
+
+h3 {
+  color: #333;
+}
+
+p {
+  color: #777;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
