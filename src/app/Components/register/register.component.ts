@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class RegisterComponent {
   onSubmit(name: string, email: any, password: any) {
+    sessionStorage.setItem('username', name);
     console.log(name, email, password, 'checking');
   }
 }

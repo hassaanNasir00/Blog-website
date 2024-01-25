@@ -14,7 +14,11 @@ export class BlogsComponent implements OnInit {
   public pageSize: number = 10;
   public totalBlogs: number = 100;
 
-  constructor(private blogService: ApiService, private route: Router) {}
+  constructor(private blogService: ApiService, private route: Router) {
+    this.blogService.blogDetailIdSubject$.subscribe((data) => {
+      console.log(data, 'checkingufeiubh');
+    });
+  }
 
   public ngOnInit(): void {
     this.getBlogList(this.currentPage, this.pageSize);
@@ -29,8 +33,9 @@ export class BlogsComponent implements OnInit {
       });
   }
 
-  public showDetail(id: number) {
-    this.route.navigate(['/blog-detail', id]);
+  public showDetail(id: number): void {
+    this.blogService.getBlogId(id);
+    this.route.navigate(['/blog-detail']);
   }
 
   public onPageChange(page: number): void {
