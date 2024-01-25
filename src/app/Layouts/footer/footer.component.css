@@ -1,0 +1,16 @@
+.navbar-brand img {
+  width: 100px;
+  height: auto;
+  padding: 10px;
+}
+.container-fluid ul {
+  list-style: none;
+  margin: 0;
+}
+.container-fluid ul li {
+  font-weight: bold;
+}
+
+.navbar {
+  padding: 10px;
+}

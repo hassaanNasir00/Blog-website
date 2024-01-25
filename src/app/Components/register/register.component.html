@@ -1,0 +1,17 @@
+<div
+  class="form"
+  (ngSubmit)="onSubmit(name.value, email.value, password.value)"
+>
+  <label for="username">Username:</label>
+  <input type="text" formControlName="name" #name />
+
+  <label for="email">Email:</label>
+  <input type="email" formControlName="email" #email />
+
+  <label for="password">Password:</label>
+  <input type="password" formControlName="password" #password />
+  <div class="d-flex gap-4 align-items-center">
+    <button type="submit">Register</button>
+    <span>Already Register? <a [routerLink]="['/login']">Login</a></span>
+  </div>
+</div>
