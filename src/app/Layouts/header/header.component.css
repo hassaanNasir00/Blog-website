@@ -7,8 +7,17 @@
   list-style: none;
   margin: 0;
 }
+.btn {
+  background-color: lightblue;
+}
 .container-fluid ul li {
   font-weight: bold;
+  cursor: pointer;
+}
+span {
+  font-size: 22px;
+  font-weight: bold;
+  margin-right: 20px;
 }
 .navbar {
   padding: 10px;

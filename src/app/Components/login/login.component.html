@@ -1,13 +1,13 @@
 <!-- app.component.html -->
-<div class="login-container">
-  <div (ngSubmit)="onSubmit()">
+<div [formGroup]="loginForm" class="login-container">
+  <div>
     <label for="email">Email:</label>
-    <input type="email" #email />
+    <input type="email" formControlName="email" />
 
     <label for="password">Password:</label>
-    <input type="password" #password />
+    <input type="password" formControlName="password" />
     <div class="d-flex gap-4 align-items-center">
-      <button type="submit">Login</button>
+      <button (click)="onSubmit()">Login</button>
       <span>Not Registered? <a [routerLink]="['/register']">Register</a></span>
     </div>
   </div>

@@ -1,8 +1,18 @@
-.blogDetail {
-  margin: auto;
-  width: 85%;
-  height: fit-content;
+.blog-box {
+  justify-content: center;
+  align-items: flex-start;
   margin-top: 80px;
+  padding: 20px;
+  gap: 35px;
+}
+
+.img-sec {
+  margin-top: 30px;
+  width: 400px;
+}
+.blogDetail {
+  width: 45%;
+  height: fit-content;
   margin-bottom: 80px;
   display: flex;
   flex-direction: column;
@@ -42,3 +52,72 @@ button {
 button:hover {
   box-shadow: 0 0 10px red;
 }
+img {
+  width: 400px;
+  height: auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  padding: 30px;
+}
+
+input {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 40%;
+}
+
+button.comment-btn {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100px;
+  height: auto;
+}
+
+button.comment-btn:hover {
+  background-color: #2980b9;
+}
+
+ul {
+  list-style: none;
+  padding: 10px;
+}
+
+li {
+  margin-bottom: 10px;
+  margin-left: 20px;
+  background-color: #e5e5e5;
+  padding: 15px;
+  width: 40%;
+  height: auto;
+  border-radius: 11px;
+}
+
+.username {
+  font-weight: bold;
+  font-size: 15px;
+}
+.user-comment {
+  font-weight: 300;
+}
+
+/* Optional: Add some styling for the overall container
+.comment-container {
+  max-width: 400px;
+  margin: 0 auto;
+} */
+
+/* Optional: Style for the comment section header */
+/* .comment-header {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+} */

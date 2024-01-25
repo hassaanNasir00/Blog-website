@@ -1,11 +1,40 @@
-<div class="blogDetail" *ngIf="blogDetail">
-  <div>
-    <div class="d-flex justify-content-between">
-      <h1>{{ blogDetail.blog.title }}</h1>
-      <button [routerLink]="['/blogs']">X</button>
-    </div>
+<div
+  class="blog-box d-flex justify-content-center align-items-start"
+  *ngIf="blogDetail"
+>
+  <div class="img-sec">
+    <img [src]="blogDetail.blog.photo_url" alt="" />
+    <h1>{{ blogDetail.blog.title }}</h1>
+
     <h6>{{ blogDetail.blog.description }}</h6>
   </div>
+  <div class="blogDetail">
+    <div>
+      <div class="d-flex justify-content-between">
+        <h1></h1>
 
-  <p>{{ blogDetail.blog.content_text }}</p>
+        <button [routerLink]="['/blogs']">X</button>
+      </div>
+    </div>
+
+    <p>{{ blogDetail.blog.content_text }}</p>
+  </div>
 </div>
+<form>
+  <input type="text" placeholder="Comment here" #comment />
+  <button
+    class="comment-btn"
+    (click)="submitComment(comment.value); comment.value = ''"
+  >
+    Submit
+  </button>
+</form>
+
+<ul *ngFor="let comment of commentSection">
+  <li class="d-flex flex-column">
+    <span class="username">
+      {{ username }}
+    </span>
+    <span class="user-comment"> {{ comment }}</span>
+  </li>
+</ul>

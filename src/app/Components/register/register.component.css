@@ -8,6 +8,16 @@
   background-color: #fff;
 }
 
+small {
+  display: block;
+}
+
+small div {
+  margin-top: -10px;
+  color: red;
+  font-weight: bold;
+}
+
 label {
   display: block;
   margin-bottom: 8px;
@@ -30,8 +40,4 @@ button {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-}
-
-button:hover {
-  background-color: #2980b9;
 }
