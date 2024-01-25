@@ -2,14 +2,23 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { BlogData } from '../Models/blog-data';
+import { BlogDetail } from '../Models/blog-detail';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ApiService {
-  baseUrl: string = 'https://api.slingacademy.com/v1/sample-data/blog-posts';
+  public baseUrl: string =
+    'https://api.slingacademy.com/v1/sample-data/blog-posts';
+  public blogDetailIdSubject$ = new BehaviorSubject<number>(0);
+  public blogId$ = this.blogDetailIdSubject$.asObservable();
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {
+    const storedBlogId = localStorage.getItem('blogId');
+    if (storedBlogId) {
+      this.blogDetailIdSubject$.next(+storedBlogId);
+    }
+  }
 
   public getBlogPosts(
     page: number,
@@ -22,7 +31,12 @@ export class ApiService {
     );
   }
 
-  public getBlogDetails(id: number): Observable<any> {
-    return this.http.get<any>(`${this.baseUrl}/${id}`);
+  public getBlogDetails(id: number): Observable<BlogDetail> {
+    return this.http.get<BlogDetail>(`${this.baseUrl}/${id}`);
+  }
+
+  public getBlogId(id: number): void {
+    this.blogDetailIdSubject$.next(id);
+    localStorage.setItem('blogId', id.toString());
   }
 }

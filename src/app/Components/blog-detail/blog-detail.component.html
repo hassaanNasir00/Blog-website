@@ -1,1 +1,11 @@
-<p>{{ blogDetail.title }}</p>
+<div class="blogDetail" *ngIf="blogDetail">
+  <div>
+    <div class="d-flex justify-content-between">
+      <h1>{{ blogDetail.blog.title }}</h1>
+      <button [routerLink]="['/blogs']">X</button>
+    </div>
+    <h6>{{ blogDetail.blog.description }}</h6>
+  </div>
+
+  <p>{{ blogDetail.blog.content_text }}</p>
+</div>

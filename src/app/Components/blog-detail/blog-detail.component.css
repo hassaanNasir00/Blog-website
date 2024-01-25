@@ -1,0 +1,44 @@
+.blogDetail {
+  margin: auto;
+  width: 85%;
+  height: fit-content;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: justify;
+  border: solid 1px lightblue;
+  background-color: lightblue;
+  padding: 50px;
+  border-radius: 50px;
+  box-shadow: 0 0 16px blueviolet;
+}
+h1 {
+  font-weight: bold;
+}
+
+h6 {
+  font-weight: bold;
+  color: gray;
+}
+
+p {
+  font-size: 20px;
+  color: #404040;
+}
+
+button {
+  background: red;
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 20px;
+  padding: 5px;
+  font-weight: bold;
+  color: lightsteelblue;
+  transition: all 0.3s;
+}
+button:hover {
+  box-shadow: 0 0 10px red;
+}

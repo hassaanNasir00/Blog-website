@@ -10,8 +10,15 @@
   margin-bottom: 20px;
   border: 1px solid #ddd;
   padding: 20px;
-  height: 350px;
+  height: 372px;
   width: 20%;
+  background-color: #ececec;
+}
+.blog-post button {
+  background: black;
+  color: white;
+  border: none;
+  padding: 5px 12px;
 }
 
 h3 {
