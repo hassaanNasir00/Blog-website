@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +16,7 @@ import { HeaderComponent } from './Layouts/header/header.component';
 import { FooterComponent } from './Layouts/footer/footer.component';
 import { ContactComponent } from './Components/contact/contact.component';
 import { BlogDetailComponent } from './Components/blog-detail/blog-detail.component';
+import { GalleryDetailComponent } from './Components/gallery-detail/gallery-detail.component';
 
 @NgModule({
   declarations: [
@@ -28,8 +31,15 @@ import { BlogDetailComponent } from './Components/blog-detail/blog-detail.compon
     FooterComponent,
     ContactComponent,
     BlogDetailComponent,
+    GalleryDetailComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

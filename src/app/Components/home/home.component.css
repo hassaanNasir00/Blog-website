@@ -1,72 +1,44 @@
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f8f8f8;
+  background-color: #282c33;
+  color: white;
 }
 
-section {
-  max-width: 800px;
-  margin: 20px auto;
-  background-color: #fff;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-article {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 30px;
-  border-radius: 8px;
-  transition: transform 0.3s;
-  overflow: hidden;
-}
-
-article:hover {
-  transform: scale(1.02);
-}
-
-.featured-image {
-  height: 200px;
-  overflow: hidden;
-}
-
-.featured-image img {
-  width: 100%;
+.main-img {
+  background: url("/assets/images/Group\ 46.png");
+  background-repeat: no-repeat;
+  width: 70vh;
   height: auto;
-  border-bottom: 2px solid #ddd;
+  z-index: 2;
+}
+main {
+  padding-top: 40px;
 }
 
-.content {
-  padding: 20px;
+button {
+  border: none;
+  padding: 14px;
+  width: 30%;
+  color: rgb(27, 26, 26);
+  font-weight: bold;
+  font-size: 18px;
+  background-image: linear-gradient(135deg, #a400b8 40%, #5703a3 90%);
 }
 
-h2 {
-  color: #333;
-  font-size: 1.8em;
-  margin-bottom: 10px;
+.msg {
+  display: inline-flex;
+  padding: 32px;
+  align-items: flex-start;
+  gap: 10px;
+  border: 1px solid var(--gray, #abb2bf);
+  background: var(--background, #282c33);
 }
 
-p {
-  color: #555;
-  line-height: 1.6;
-}
-
-.author {
-  color: #777;
-}
-
-.read-more {
-  margin-top: 10px;
-  padding: 8px 16px;
-  background-color: #3498db;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 4px;
-  transition: background-color 0.3s;
-}
-
-.read-more:hover {
-  background-color: #2980b9;
+.quote {
+  display: flex;
+  justify-content: flex-start;
+  width: 60%;
+  align-items: center;
+  padding-bottom: 70px;
 }

@@ -1,24 +1,26 @@
-<div *ngIf="blogList" class="main">
-  <div *ngFor="let blog of blogList.blogs" class="blog-post">
-    <img [src]="blog.photo_url" alt="{{ blog.title }} image" />
-    <h3>{{ blog.title }}</h3>
-    <p>{{ blog.updated_at | date }}</p>
-    <button (click)="showDetail(blog.id)">Details</button>
+<body>
+  <div *ngIf="blogList" class="main">
+    <div *ngFor="let blog of blogList.blogs" class="blog-post">
+      <img [src]="blog.photo_url" alt="{{ blog.title }} image" />
+      <h3>{{ blog.title }}</h3>
+      <p>{{ blog.updated_at | date }}</p>
+      <button (click)="showDetail(blog.id)">Details</button>
+    </div>
   </div>
-</div>
 
-<div>
-  <button
-    (click)="onPageChange(currentPage - 1)"
-    [disabled]="currentPage === 1"
-  >
-    Previous
-  </button>
-  <span>{{ currentPage }}</span>
-  <button
-    (click)="onPageChange(currentPage + 1)"
-    [disabled]="currentPage * pageSize >= totalBlogs"
-  >
-    Next
-  </button>
-</div>
+  <div class="btn-div d-flex justify-content-around">
+    <button
+      (click)="onPageChange(currentPage - 1)"
+      [disabled]="currentPage === 1"
+    >
+      Previous
+    </button>
+    <span>{{ currentPage }}</span>
+    <button
+      (click)="onPageChange(currentPage + 1)"
+      [disabled]="currentPage * pageSize >= totalBlogs"
+    >
+      Next
+    </button>
+  </div>
+</body>

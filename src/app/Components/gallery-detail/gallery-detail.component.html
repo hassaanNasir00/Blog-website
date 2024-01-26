@@ -1,0 +1,11 @@
+<div class="main-card" *ngIf="galleryDetail">
+  <div class="img-div">
+    <img [src]="galleryDetail.image" alt="" />
+  </div>
+  <div class="detail">
+    <h1>{{ galleryDetail.title }}</h1>
+    <p style="color: gray">{{ galleryDetail.category }}</p>
+    <p style="color: gray">{{ galleryDetail.price }}$</p>
+    <p style="width: 350px">{{ galleryDetail.description }}</p>
+  </div>
+</div>

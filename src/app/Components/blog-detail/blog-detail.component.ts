@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BlogDetail } from 'src/app/Models/blog-detail';
 import { ApiService } from 'src/app/Services/api.service';
+import { AuthService } from 'src/app/Services/auth.service';
 
 @Component({
   selector: 'app-blog-detail',
@@ -10,10 +11,15 @@ import { ApiService } from 'src/app/Services/api.service';
 export class BlogDetailComponent implements OnInit {
   public blogDetail?: BlogDetail;
   public blogId: number = 0;
-  constructor(private service: ApiService) {}
+
+  commentSection: string[] = [];
+  username: string | null;
+  constructor(private service: ApiService, private authService: AuthService) {
+    this.username = this.authService.userNameSubject.value;
+  }
 
   ngOnInit(): void {
-    this.service.blogId$.subscribe((id) => {
+    this.service.blogDetailIdSubject$.subscribe((id) => {
       this.getBlogDetail(id);
     });
   }
@@ -28,5 +34,9 @@ export class BlogDetailComponent implements OnInit {
         console.error('error fetching blog details', error);
       }
     );
+  }
+
+  submitComment(comment: string): void {
+    this.commentSection.push(comment);
   }
 }

@@ -1,0 +1,67 @@
+.main-div-left {
+  height: 234px;
+  width: 100%;
+  align-items: center;
+}
+
+.main-div {
+  width: 100%;
+}
+
+.center {
+  margin-left: 122px;
+}
+
+.footer-main {
+  height: 197px;
+}
+
+.upper-section {
+  width: 85%;
+  justify-content: space-between;
+}
+.fa-brands {
+  font-size: 20px;
+  color: gray;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  margin: auto;
+  border: solid 1px gray;
+  padding: 30px;
+}
+
+input {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: transparent;
+  color: white;
+}
+
+button {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+small {
+  display: block;
+}
+
+small div {
+  margin-top: -10px;
+  color: red;
+  font-weight: bold;
+}
