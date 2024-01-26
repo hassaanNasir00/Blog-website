@@ -22,7 +22,6 @@
   background-color: lightblue;
   padding: 50px;
   border-radius: 50px;
-  box-shadow: 0 0 16px blueviolet;
 }
 h1 {
   font-weight: bold;
@@ -39,7 +38,7 @@ p {
 }
 
 button {
-  background: red;
+  background-image: linear-gradient(135deg, #a400b8 40%, #5703a3 90%);
   width: 30px;
   height: 30px;
   border: none;
@@ -73,17 +72,12 @@ input {
 }
 
 button.comment-btn {
-  background-color: #3498db;
+  background-image: linear-gradient(135deg, #a400b8 40%, #5703a3 90%);
   color: white;
   border: none;
-  border-radius: 5px;
   cursor: pointer;
   width: 100px;
   height: auto;
-}
-
-button.comment-btn:hover {
-  background-color: #2980b9;
 }
 
 ul {

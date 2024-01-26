@@ -1,5 +1,10 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import {
+  AbstractControl,
+  FormBuilder,
+  FormGroup,
+  Validators,
+} from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/Services/auth.service';
 
@@ -16,10 +21,18 @@ export class LoginComponent {
     private authService: AuthService
   ) {
     this.loginForm = this.fb.group({
-      email: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
       password: ['', Validators.required],
     });
   }
+
+  get password(): AbstractControl {
+    return this.loginForm.controls['password'];
+  }
+  get email(): AbstractControl {
+    return this.loginForm.controls['email'];
+  }
+
   onSubmit() {
     const loginEmailValue = this.loginForm.value.email;
     const loginPasswordValue = this.loginForm.value.password;

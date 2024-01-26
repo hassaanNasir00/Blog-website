@@ -16,6 +16,7 @@ import { HeaderComponent } from './Layouts/header/header.component';
 import { FooterComponent } from './Layouts/footer/footer.component';
 import { ContactComponent } from './Components/contact/contact.component';
 import { BlogDetailComponent } from './Components/blog-detail/blog-detail.component';
+import { GalleryDetailComponent } from './Components/gallery-detail/gallery-detail.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { BlogDetailComponent } from './Components/blog-detail/blog-detail.compon
     FooterComponent,
     ContactComponent,
     BlogDetailComponent,
+    GalleryDetailComponent,
   ],
   imports: [
     BrowserModule,

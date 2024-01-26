@@ -1,0 +1,19 @@
+.main-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.img-div {
+  width: 600px;
+  height: auto;
+}
+.img-div img {
+  width: 80%;
+  height: auto;
+}
+.detail {
+  width: 500px;
+  color: white;
+}

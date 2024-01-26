@@ -3,9 +3,16 @@
   <div>
     <label for="email">Email:</label>
     <input type="email" formControlName="email" />
+    <small *ngIf="email.invalid && (email.dirty || email.touched)">
+      <div *ngIf="email.errors?.['required']">Email required</div>
+      <div *ngIf="email.errors?.['email']">Email should be valid</div>
+    </small>
 
     <label for="password">Password:</label>
     <input type="password" formControlName="password" />
+    <small *ngIf="password.invalid && (password.dirty || password.touched)">
+      <div *ngIf="password.errors?.['required']">Password required</div>
+    </small>
     <div class="d-flex gap-4 align-items-center">
       <button (click)="onSubmit()">Login</button>
       <span>Not Registered? <a [routerLink]="['/register']">Register</a></span>

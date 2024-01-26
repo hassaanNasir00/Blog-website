@@ -1,1 +1,199 @@
-<p>contact works!</p>
+<body
+  style="
+    background-color: #282c33;
+    color: white;
+    line-height: normal;
+    font-style: normal;
+    padding-top: 86px;
+    padding-bottom: 150px;
+  "
+>
+  <main class="container d-flex justify-content-between align-items-center">
+    <div
+      class="main-div d-flex flex-row justify-content-between align-items-center"
+    >
+      <div class="main-div-left d-flex flex-row justify-content-between">
+        <div>
+          <div>
+            <div>
+              <p
+                style="
+                  color: #fff;
+                  font-size: 32px;
+                  font-style: normal;
+                  font-weight: 600;
+                  line-height: normal;
+                "
+              >
+                <span
+                  style="
+                    color: var(--primary, #c778dd);
+                    font-family: Fira Code;
+                    font-size: 32px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;
+                  "
+                  >/</span
+                >contacts
+              </p>
+            </div>
+            <div>
+              <p
+                style="
+                  color: #fff;
+                  font-size: 16px;
+                  font-style: normal;
+                  font-weight: 400;
+                  line-height: normal;
+                "
+                id="about-demo"
+              >
+                Who am i?
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <p
+              style="
+                color: var(--gray, #abb2bf);
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 25px; /* 156.25% */
+                width: 490px;
+              "
+              id="demo"
+            ></p>
+          </div>
+        </div>
+        <!-- 
+        <div>
+          <div
+            style="
+              border: 1px solid var(--gray, #abb2bf);
+              display: inline-flex;
+              padding: 16px;
+              padding-left: 30px;
+              padding-right: 30px;
+              flex-direction: column;
+              align-items: flex-start;
+              gap: 8px;
+              width: fit-content;
+            "
+          >
+            <p
+              style="
+                color: #fff;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+              "
+            >
+              Phone number
+            </p>
+            <p
+              style="
+                color: var(--gray, #abb2bf);
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+              "
+            >
+              +92-308-6286-798
+            </p>
+          </div>
+          <div
+            style="
+              border: 1px solid var(--gray, #abb2bf);
+              display: inline-flex;
+              padding: 16px;
+              padding-left: 30px;
+              padding-right: 30px;
+              flex-direction: column;
+              align-items: flex-start;
+              gap: 8px;
+              width: fit-content;
+            "
+          >
+            <p
+              style="
+                color: #fff;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+              "
+            >
+              Message me here
+            </p>
+            <div class="d-flex gap-2 align-items-center">
+              <i class="fa-brands fa-instagram"></i>
+              <p
+                style="
+                  margin-bottom: 0;
+                  color: var(--gray, #abb2bf);
+                  font-size: 16px;
+                  font-style: normal;
+                  font-weight: 400;
+                  line-height: normal;
+                "
+              >
+                hassaan_075
+              </p>
+            </div>
+
+            <div class="d-flex gap-2 align-items-center">
+              <i style="color: gray" class="fa-solid fa-envelope"></i>
+              <p
+                style="
+                  margin-bottom: 0;
+                  color: var(--gray, #abb2bf);
+                  font-size: 16px;
+                  font-style: normal;
+                  font-weight: 400;
+                  line-height: normal;
+                "
+              >
+                zincoxide38@gmail.com
+              </p>
+            </div>
+          </div>
+        </div> -->
+
+        <form action="javascript:void(0)" [formGroup]="messageForm">
+          <h3 style="font-size: 20px; margin-bottom: 20px">Send Message</h3>
+          <input type="text" formControlName="name" placeholder="Enter name" />
+          <small *ngIf="name.invalid && (name.dirty || name.touched)">
+            <div *ngIf="name.errors?.['required']">Name required</div>
+          </small>
+          <input
+            type="email"
+            formControlName="email"
+            placeholder="Enter email"
+          />
+          <small *ngIf="email.invalid && (email.dirty || email.touched)">
+            <div *ngIf="email.errors?.['required']">Email required</div>
+            <div *ngIf="email.errors?.['email']">Email should be valid</div>
+          </small>
+          <input type="text" formControlName="subject" placeholder="Subject" />
+          <small *ngIf="subject.invalid && (subject.dirty || subject.touched)">
+            <div *ngIf="subject.errors?.['required']">Subject required</div>
+          </small>
+          <input
+            type="text"
+            formControlName="message"
+            placeholder="Message here"
+          />
+          <small *ngIf="message.invalid && (message.dirty || message.touched)">
+            <div *ngIf="message.errors?.['required']">Type Somthing</div>
+          </small>
+          <button (click)="sendEmail()">Submit</button>
+        </form>
+      </div>
+    </div>
+  </main>
+</body>

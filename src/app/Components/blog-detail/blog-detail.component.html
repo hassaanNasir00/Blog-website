@@ -2,11 +2,12 @@
   class="blog-box d-flex justify-content-center align-items-start"
   *ngIf="blogDetail"
 >
-  <div class="img-sec">
+  <div class="img-sec d-flex flex-column gap-2">
     <img [src]="blogDetail.blog.photo_url" alt="" />
-    <h1>{{ blogDetail.blog.title }}</h1>
+    <h1 style="color: white">{{ blogDetail.blog.title }}</h1>
 
     <h6>{{ blogDetail.blog.description }}</h6>
+    <h6>{{ blogDetail.blog.updated_at | date }}</h6>
   </div>
   <div class="blogDetail">
     <div>
@@ -25,6 +26,7 @@
   <button
     class="comment-btn"
     (click)="submitComment(comment.value); comment.value = ''"
+    [disabled]=""
   >
     Submit
   </button>

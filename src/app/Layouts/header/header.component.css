@@ -7,8 +7,25 @@
   list-style: none;
   margin: 0;
 }
-.btn {
-  background-color: lightblue;
+button {
+  background-color: #c778dd;
+  border: none;
+  padding: 7px;
+  color: rgb(27, 26, 26);
+  font-weight: bold;
+  font-size: 17px;
+  background-image: linear-gradient(135deg, #a400b8 40%, #5703a3 90%);
+  width: 100px;
+}
+.sign-btn {
+  background-color: #c778dd;
+  border: none;
+  padding: 5px px;
+  width: 101px;
+  color: rgb(27, 26, 26);
+  font-weight: bold;
+  font-size: 18px;
+  background-image: linear-gradient(135deg, #a400b8 40%, #5703a3 90%);
 }
 .container-fluid ul li {
   font-weight: bold;
@@ -21,4 +38,6 @@ span {
 }
 .navbar {
   padding: 10px;
+  background-color: #282c33;
+  color: white;
 }

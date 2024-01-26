@@ -1,1 +1,14 @@
-<p>gallery works!</p>
+<div class="main-box">
+  <div class="main-card" *ngFor="let post of galleryPost">
+    <div class="img-div">
+      <img [src]="post.image" alt="" />
+    </div>
+    <div class="product-detail">
+      <h6>{{ post.title }}</h6>
+      <p>{{ post.price }}$</p>
+      <div>
+        <button (click)="galleryPostDetail(post.id)">Detail</button>
+      </div>
+    </div>
+  </div>
+</div>

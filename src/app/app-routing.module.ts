@@ -7,6 +7,8 @@ import { RegisterComponent } from './Components/register/register.component';
 import { BlogsComponent } from './Components/blogs/blogs.component';
 import { BlogDetailComponent } from './Components/blog-detail/blog-detail.component';
 import { AboutComponent } from './Components/about/about.component';
+import { GalleryComponent } from './Components/gallery/gallery.component';
+import { GalleryDetailComponent } from './Components/gallery-detail/gallery-detail.component';
 
 const routes: Routes = [
   {
@@ -41,6 +43,14 @@ const routes: Routes = [
   {
     path: 'about',
     component: AboutComponent,
+  },
+  {
+    path: 'gallery',
+    component: GalleryComponent,
+  },
+  {
+    path: 'gallery-detail',
+    component: GalleryDetailComponent,
   },
 ];
 

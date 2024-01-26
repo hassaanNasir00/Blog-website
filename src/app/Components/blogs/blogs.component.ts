@@ -20,9 +20,7 @@ export class BlogsComponent implements OnInit {
     private route: Router,
     private authService: AuthService
   ) {
-    this.blogService.blogDetailIdSubject$.subscribe((data) => {
-      console.log(data, 'checkingufeiubh');
-    });
+    this.blogService.blogDetailIdSubject$.subscribe((data) => {});
   }
 
   public ngOnInit(): void {

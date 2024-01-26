@@ -19,7 +19,7 @@ export class BlogDetailComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.service.blogId$.subscribe((id) => {
+    this.service.blogDetailIdSubject$.subscribe((id) => {
       this.getBlogDetail(id);
     });
   }

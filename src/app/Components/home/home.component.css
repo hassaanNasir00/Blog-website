@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #282c33;
+  color: white;
+}
+
+.main-img {
+  background: url("/assets/images/Group\ 46.png");
+  background-repeat: no-repeat;
+  width: 70vh;
+  height: auto;
+  z-index: 2;
+}
+main {
+  padding-top: 40px;
+}
+
+button {
+  border: none;
+  padding: 14px;
+  width: 30%;
+  color: rgb(27, 26, 26);
+  font-weight: bold;
+  font-size: 18px;
+  background-image: linear-gradient(135deg, #a400b8 40%, #5703a3 90%);
+}
+
+.msg {
+  display: inline-flex;
+  padding: 32px;
+  align-items: flex-start;
+  gap: 10px;
+  border: 1px solid var(--gray, #abb2bf);
+  background: var(--background, #282c33);
+}
+
+.quote {
+  display: flex;
+  justify-content: flex-start;
+  width: 60%;
+  align-items: center;
+  padding-bottom: 70px;
+}
